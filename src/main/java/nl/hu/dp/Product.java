@@ -15,7 +15,7 @@ public class Product {
     private String beschrijving;
     private Double prijs;
     @ManyToMany
-    @JoinTable(name = "ov_chipkaart_product", joinColumns = {@JoinColumn(name = "product_nummer")},
+    @JoinTable(name = "ov_chipkaart_product", joinColumns = @JoinColumn(name = "product_nummer"),
             inverseJoinColumns = @JoinColumn(name = "kaart_nummer"))
     private List<OVChipkaart> ovChipkaarten = new ArrayList<>();
 
